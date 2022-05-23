@@ -545,6 +545,10 @@
     <dependency.locations.enabled>false</dependency.locations.enabled>
     <surefire.version>2.22.1</surefire.version>
 
+    <!-- Sonar Cloud dependencies -->
+    <sonar.organization>lucacapotombolo</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
     <surefire-forkcount>8</surefire-forkcount>
     <redirectTestOutputToFile>true</redirectTestOutputToFile>
 
