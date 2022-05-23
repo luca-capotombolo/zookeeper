@@ -546,6 +546,8 @@
     <surefire.version>2.22.1</surefire.version>
 
     <!-- Sonar Cloud dependencies -->
+    <sonar.projectKey>luca-capotombolo_zookeeper_isw2</sonar.projectKey>
+    <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
     <sonar.organization>lucacapotombolo</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
