@@ -354,7 +354,6 @@
         <maven.compiler.release>8</maven.compiler.release>
         <sonar.organization>lucacapotombolo</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
       </properties>
       <build>
         <pluginManagement>
