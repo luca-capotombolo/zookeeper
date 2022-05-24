@@ -19,4 +19,11 @@ public class AppTest
         assertEquals(16, c);
 
     }
+
+    @Test
+    public void sub(){
+        App app = new App();
+        int c = app.sub(12,4);
+        assertEquals(c, 8);
+    }
 }
