@@ -66,6 +66,7 @@
     <module>zookeeper-assembly</module>
     <module>zookeeper-compatibility-tests</module>
     <module>tests</module>
+    <module>dummy</module>
   </modules>
 
   <scm>
