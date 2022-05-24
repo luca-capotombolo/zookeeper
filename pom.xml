@@ -569,7 +569,7 @@
     <dependency.locations.enabled>false</dependency.locations.enabled>
     <surefire.version>2.22.1</surefire.version>
 
-    <sonar.coverage.jacoco.xmlReportPaths>${maven.multiModuleProjectDirectory}/test-jacoco-coverage/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>../test-jacoco-coverage/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 
     <!-- Sonar Cloud dependencies -->
     <sonar.projectKey>luca-capotombolo_zookeeper_isw2</sonar.projectKey>
