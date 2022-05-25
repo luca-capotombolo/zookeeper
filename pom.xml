@@ -563,21 +563,19 @@
   </profiles>
 
   <properties>
+
     <!-- maven properties -->
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <dependency.locations.enabled>false</dependency.locations.enabled>
     <surefire.version>2.22.1</surefire.version>
 
-    <!-- ${maven.multiModuleProjectDirectory} -->
-
-    <sonar.coverage.jacoco.xmlReportPaths>../test-jacoco-coverage/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-
     <!-- Sonar Cloud dependencies -->
     <sonar.projectKey>luca-capotombolo_zookeeper_isw2</sonar.projectKey>
     <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
     <sonar.organization>lucacapotombolo</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.coverage.jacoco.xmlReportPaths>${maven.multiModuleProjectDirectory}/test-jacoco-coverage/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 
     <surefire-forkcount>8</surefire-forkcount>
     <redirectTestOutputToFile>true</redirectTestOutputToFile>

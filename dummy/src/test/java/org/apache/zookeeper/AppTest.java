@@ -26,4 +26,12 @@ public class AppTest
         int c = app.sub(12,4);
         assertEquals(c, 8);
     }
+
+    @Test
+    public void mul(){
+        App app = new App();
+        int c = app.mul(2,2);
+        assertEquals(c, 4);
+    }
+
 }
