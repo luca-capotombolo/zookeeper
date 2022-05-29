@@ -579,7 +579,7 @@
 
     <surefire-forkcount>8</surefire-forkcount>
     <redirectTestOutputToFile>true</redirectTestOutputToFile>
-    
+
 
     <!-- dependency versions -->
     <slf4j.version>1.7.30</slf4j.version>
