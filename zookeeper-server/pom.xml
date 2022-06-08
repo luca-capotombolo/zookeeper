@@ -374,7 +374,9 @@
                 <param>org.apache.zookeeper.common.PathUtils</param>
               </targetClasses>
               <targetTests>
-                <param>org.apache.zookeeper.common.TestPathUtils</param>
+                <param>org.apache.zookeeper.common.TestPathUtilsValid</param>
+                <param>org.apache.zookeeper.common.TestPathUtilsInvalid</param>
+                <param>org.apache.zookeeper.common.TestPathUtilsInvalidUnicode</param>
               </targetTests>
               <avoidCallsTo>
                 <avoidCallsTo>org.slf4j</avoidCallsTo>
