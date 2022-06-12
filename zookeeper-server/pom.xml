@@ -372,12 +372,93 @@
             <configuration>
               <targetClasses>
                 <param>org.apache.zookeeper.common.PathUtils</param>
+                <param>org.apache.zookeeper.server.DataTree</param>
               </targetClasses>
               <targetTests>
                 <param>org.apache.zookeeper.common.TestPathUtilsValid</param>
                 <param>org.apache.zookeeper.common.TestPathUtilsInvalid</param>
                 <param>org.apache.zookeeper.common.TestPathUtilsInvalidUnicode</param>
+                <param>org.apache.zookeeper.server.deletenodetests.TestDataTreeDeleteValidNode</param>
+                <param>org.apache.zookeeper.server.deletenodetests.TestDataTreeDeleteInvalidNode</param>
+                <param>org.apache.zookeeper.server.deletenodetests.TestDataTreeDeleteNoParent</param>
+                <param>org.apache.zookeeper.server.deletenodetests.TestDateTreeDeleteValidNodePzxid</param>
+                <param>org.apache.zookeeper.server.createnodetests.TestDataTreeInvalidPath</param>
+                <param>org.apache.zookeeper.server.createnodetests.TestDataTreeValidPath</param>
+                <param>org.apache.zookeeper.server.createnodetests.TestDataTreeValidPathEphNumber</param>
+                <param>org.apache.zookeeper.server.createnodetests.TestDateTreeChildEphemeral</param>
+                <param>org.apache.zookeeper.server.createnodetests.TestDateTreeValidPathCVersion</param>
               </targetTests>
+              <excludedMethods>
+                <excludedMethod>testToExclude</excludedMethod>
+                <excludedMethod>getEphemerals</excludedMethod>
+                <excludedMethod>getContainers</excludedMethod>
+                <excludedMethod>getTtls</excludedMethod>
+                <excludedMethod>getSessions</excludedMethod>
+                <excludedMethod>getNode</excludedMethod>
+                <excludedMethod>getNodeCount</excludedMethod>
+                <excludedMethod>getWatchCount</excludedMethod>
+                <excludedMethod>getLastProcessedZxidDigest</excludedMethod>
+                <excludedMethod>getEphemeralsCount</excludedMethod>
+                <excludedMethod>approximateDataSize</excludedMethod>
+                <excludedMethod>getNodeSize</excludedMethod>
+                <excludedMethod>cachedApproximateDataSize</excludedMethod>
+                <excludedMethod>addConfigNode</excludedMethod>
+                <excludedMethod>isSpecialPath</excludedMethod>
+                <excludedMethod>copyStatPersisted</excludedMethod>
+                <excludedMethod>copyStat</excludedMethod>
+                <excludedMethod>updateQuotaStat</excludedMethod>
+                <excludedMethod>setData</excludedMethod>
+                <excludedMethod>getMaxPrefixWithQuota</excludedMethod>
+                <excludedMethod>addWatch</excludedMethod>
+                <excludedMethod>getData</excludedMethod>
+                <excludedMethod>statNode</excludedMethod>
+                <excludedMethod>getChildren</excludedMethod>
+                <excludedMethod>getAllChildrenNumber</excludedMethod>
+                <excludedMethod>setACL</excludedMethod>
+                <excludedMethod>getACL</excludedMethod>
+                <excludedMethod>aclCacheSize</excludedMethod>
+                <excludedMethod>processTxn</excludedMethod>
+                <excludedMethod>processTxn</excludedMethod>
+                <excludedMethod>killSession</excludedMethod>
+                <excludedMethod>deleteNodes</excludedMethod>
+                <excludedMethod>getCounts</excludedMethod>
+                <excludedMethod>updateQuotaForPath</excludedMethod>
+                <excludedMethod>traverseNode</excludedMethod>
+                <excludedMethod>setupQuota</excludedMethod>
+                <excludedMethod>serializeNode</excludedMethod>
+                <excludedMethod>serializeNodeData</excludedMethod>
+                <excludedMethod>serializeAcls</excludedMethod>
+                <excludedMethod>serializeNodes</excludedMethod>
+                <excludedMethod>serialize</excludedMethod>
+                <excludedMethod>deserialize</excludedMethod>
+                <excludedMethod>dumpEphemerals</excludedMethod>
+                <excludedMethod>dumpWatchesSummary</excludedMethod>
+                <excludedMethod>dumpWatches</excludedMethod>
+                <excludedMethod>getWatches</excludedMethod>
+                <excludedMethod>getWatchesByPath</excludedMethod>
+                <excludedMethod>getWatchesSummary</excludedMethod>
+                <excludedMethod>shutdownWatcher</excludedMethod>
+                <excludedMethod>getEphemerals</excludedMethod>
+                <excludedMethod>removeCnxn</excludedMethod>
+                <excludedMethod>setWatches</excludedMethod>
+                <excludedMethod>setCversionPzxid</excludedMethod>
+                <excludedMethod>containsWatcher</excludedMethod>
+                <excludedMethod>removeWatch</excludedMethod>
+                <excludedMethod>getReferenceCountedAclCache</excludedMethod>
+                <excludedMethod>updateReadStat</excludedMethod>
+                <excludedMethod>updateWriteStat</excludedMethod>
+                <excludedMethod>logZxidDigest</excludedMethod>
+                <excludedMethod>serializeZxidDigest</excludedMethod>
+                <excludedMethod>deserializeZxidDigest</excludedMethod>
+                <excludedMethod>compareSnapshotDigests</excludedMethod>
+                <excludedMethod>compareDigest</excludedMethod>
+                <excludedMethod>reportDigestMismatch</excludedMethod>
+                <excludedMethod>getTreeDigest</excludedMethod>
+                <excludedMethod>getDigestFromLoadedSnapshot</excludedMethod>
+                <excludedMethod>addDigestWatcher</excludedMethod>
+                <excludedMethod>getDigestLog</excludedMethod>
+                <excludedMethod>createStat</excludedMethod>
+              </excludedMethods>
               <avoidCallsTo>
                 <avoidCallsTo>org.slf4j</avoidCallsTo>
               </avoidCallsTo>
