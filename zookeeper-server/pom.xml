@@ -370,6 +370,7 @@
             <artifactId>pitest-maven</artifactId>
             <version>${pitest.version}</version>
             <configuration>
+              <timeoutConstant>6000</timeoutConstant>
               <targetClasses>
                 <param>org.apache.zookeeper.common.PathUtils</param>
                 <param>org.apache.zookeeper.server.DataTree</param>

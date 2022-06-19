@@ -74,11 +74,11 @@ public class TestDataTreeValidPath {
         return Arrays.asList(new Object[][] {
                 //NO EPHEMERAL NODE
                 {"/a", new byte[1], ZooDefs.Ids.CREATOR_ALL_ACL, 0, 3, 1, 1},
-                //NO EPHEMERAL NODE
+                //EPHEMERAL NODE
                 {"/abc", new byte[30000], ZooDefs.Ids.OPEN_ACL_UNSAFE, 122, 0, 1, 1},
                 //NO EPHEMERAL NODE
                 {"/abcd56", new byte[0], ZooDefs.Ids.CREATOR_ALL_ACL, 0, -2, 1, 1},
-                //NO EPHEMERAL NODE
+                //EPHEMERAL NODE
                 {"/a??9m", null, ZooDefs.Ids.READ_ACL_UNSAFE, 122, 0, 1, 1},
                 //next iteration (2)
                 //TTL NODE
