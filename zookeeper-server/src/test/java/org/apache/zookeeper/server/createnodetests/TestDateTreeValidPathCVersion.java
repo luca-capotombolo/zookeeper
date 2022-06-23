@@ -58,9 +58,12 @@ public class TestDateTreeValidPathCVersion {
         DataNode root = this.dt.getNode("/");
         n = root.stat.getCversion();
         this.dt.createNode(this.path, this.data, this.acl, this.ephemeralOwner, this.parentCVersion, this.zxid, this.time);
+        root = this.dt.getNode("/");
         if(n <= this.parentCVersion)
             Assert.assertEquals(this.parentCVersion, root.stat.getCversion());
-        if(n > this.parentCVersion)
+        if(n > this.parentCVersion) {
             Assert.assertNotEquals(this.parentCVersion, root.stat.getCversion());
+            Assert.assertEquals(n, root.stat.getCversion());
+        }
     }
 }

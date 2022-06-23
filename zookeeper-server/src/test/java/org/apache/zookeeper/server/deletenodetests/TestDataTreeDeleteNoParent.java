@@ -70,7 +70,7 @@ public class TestDataTreeDeleteNoParent {
         Exception error  =null;
         try{
             this.dt.deleteNode(this.path, this.zxid);
-        }catch (Exception e){
+        }catch (KeeperException.NoNodeException e){
             error = e;
         }
 

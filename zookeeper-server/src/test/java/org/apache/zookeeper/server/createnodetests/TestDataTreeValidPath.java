@@ -21,6 +21,7 @@ public class TestDataTreeValidPath {
     private int parentCVersion;
     private long zxid;
     private long time;
+    private int length;
     private DataTree dt;
 
 
@@ -67,6 +68,7 @@ public class TestDataTreeValidPath {
             }
             count++;
         }
+        this.length = n;
     }
 
     @Parameterized.Parameters
@@ -101,6 +103,9 @@ public class TestDataTreeValidPath {
             error = e;
         }
         Assert.assertNull(error);
+        //""    "/zookeeper"    "/zookeeper/config"     "/zookeeper/quota"
+        //this.length --> "/" YES
+        Assert.assertEquals(this.length, this.dt.getNodeCount() - 4);
     }
 
     //next iteration
@@ -111,7 +116,7 @@ public class TestDataTreeValidPath {
         try{
             this.dt.createNode(this.path, this.data, this.acl, this.ephemeralOwner, this.parentCVersion, this.zxid, this.time);
             this.dt.createNode(this.path, this.data, this.acl, this.ephemeralOwner, this.parentCVersion, this.zxid, this.time);
-        }catch (Exception e){
+        }catch (KeeperException.NodeExistsException | KeeperException.NoNodeException e){
             error = e;
         }
         Assert.assertNotNull(error);

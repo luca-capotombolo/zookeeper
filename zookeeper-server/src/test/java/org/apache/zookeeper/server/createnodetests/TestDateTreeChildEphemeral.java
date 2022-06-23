@@ -15,6 +15,7 @@ public class TestDateTreeChildEphemeral {
         DataTree dt = new DataTree();
         Exception error = null;
 
+        //new ephemeral node
         dt.createNode("/a", new byte[300], ZooDefs.Ids.CREATOR_ALL_ACL, 2, dt.getNode("/").stat.getCversion(), 1, 1);
 
         try {
@@ -22,6 +23,8 @@ public class TestDateTreeChildEphemeral {
         }catch (Exception e){
             error = e;
         }
+
+        Assert.assertEquals(0, dt.getNode("/a").getChildren().size());
         Assert.assertNotNull(error);
     }
 
@@ -31,6 +34,7 @@ public class TestDateTreeChildEphemeral {
         DataTree dt = new DataTree();
         Exception error = null;
 
+        //new ephemeral node
         dt.createNode("/a", new byte[300], ZooDefs.Ids.CREATOR_ALL_ACL, 2, dt.getNode("/").stat.getCversion(), 1, 1);
         try {
             dt.createNode("/a/b", new byte[1000], ZooDefs.Ids.READ_ACL_UNSAFE, 2, dt.getNode("/a").stat.getCversion(),1,1);
@@ -38,6 +42,7 @@ public class TestDateTreeChildEphemeral {
             error = e;
         }
 
+        Assert.assertEquals(0, dt.getNode("/a").getChildren().size());
         Assert.assertNotNull(error);
     }
 

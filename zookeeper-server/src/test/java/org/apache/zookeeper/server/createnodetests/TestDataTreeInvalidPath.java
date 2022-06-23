@@ -56,7 +56,7 @@ public class TestDataTreeInvalidPath {
 
         try {
             this.dt.createNode(this.path, this.data, this.acl, this.ephemeralOwner, this.parentCVersion,this.zxid,this.time);
-        }catch (KeeperException.NoNodeException | KeeperException.NodeExistsException e){
+        }catch (KeeperException.NoNodeException | KeeperException.NodeExistsException | IllegalArgumentException e){
             error = e;
         }
 
