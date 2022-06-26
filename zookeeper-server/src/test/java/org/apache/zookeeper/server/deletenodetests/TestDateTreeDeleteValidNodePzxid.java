@@ -69,6 +69,7 @@ public class TestDateTreeDeleteValidNodePzxid {
         DataNode parent = dt.getNode(parentString);
         long n = parent.stat.getPzxid();
         dt.deleteNode(this.path, this.zxid);
+        parent = dt.getNode(parentString);
         if(n < this.zxid)
             Assert.assertEquals(this.zxid, parent.stat.getPzxid());
         else

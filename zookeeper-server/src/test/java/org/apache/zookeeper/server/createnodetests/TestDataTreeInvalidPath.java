@@ -43,8 +43,8 @@ public class TestDataTreeInvalidPath {
     public static Collection<Object[]> getParameters() {
         return Arrays.asList(new Object[][] {
                 //{"a", new byte[200], new ArrayList<ACL>(), 0, 0, 0, 0},
-                {"node1/node2", new byte[30000], null, 0xFF00000000000001L, 0, -1, 1},
-                {"/../node", null, ZooDefs.Ids.OPEN_ACL_UNSAFE, 0x8000000000000000L, 0, 1, 300000},
+                //{"node1/node2", new byte[30000], null, 0xFF00000000000001L, 0, -1, 1},
+                //{"/../node", null, ZooDefs.Ids.OPEN_ACL_UNSAFE, 0x8000000000000000L, 0, 1, 300000},
                 {"/a/b", new byte[4000], ZooDefs.Ids.OPEN_ACL_UNSAFE, 0, 1, 10000, 1},
                 {"/a/b", new byte[4000], ZooDefs.Ids.READ_ACL_UNSAFE, 23, 1, 1, 1}
         });
